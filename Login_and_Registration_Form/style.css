@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 100;
+    /* background-color: grey; */
+}
+
+.nav {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.nav_logo,
+.nav_link,
+.login {
+    color: #fff;
+}
+
+
+.nav,
+.nav_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nav_item {
+    column-gap: 25px;
+}
+
+.nav_logo {
+    font-size: 25px;
+}
+
+.nav_link:hover {
+    color: yellow;
+    background-color: #731997;
+    padding: 2px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.home {
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("neon-genesis-5120x3400-14064.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* .home::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+} */
+
+.login {
+    background-color: transparent;
+    border: 2px solid #fff;
+    padding: 6px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/*----to change dimension of the button when clicked---------*/
+.login:active {
+    transform: scale(0.95);
+}
+
+
+.form_container {
+    position: absolute;
+    max-width: 320px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1);
+
+    transition: all 0.4s ease-out;
+}
+
+
+.form_close {
+    cursor: pointer;
+    font-size: 22px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    opacity: 0.7;
+    color: #0b0217;
+}
+
+.input_box {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    height: 40px;
+}
+
+.input_box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid #aaaaaa;
+    padding: 0 30px;
+    color: #333;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+/* for hover the label above */
+
+
+
+
+.input_box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #707070;
+}
+
+.input_box i.email,
+i.password {
+    left: 0;
+}
+
+.input_box i.pw_hide {
+    font-size: 18px;
+    right: 0;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.form_container .input_box input:is(:focus, :valid) {
+    border-color: #7d2ae8;
+    /* border: 1px solid #7d2ae8; */
+}
+
+.input_box input:focus~i.email,
+.input_box input:focus~i.password {
+    color: #7d2ae8;
+}
+
+
+/* option field */
+
+.option_field {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.checkbox {
+    display: flex;
+    white-space: nowrap;
+    column-gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox input {
+    cursor: pointer;
+    accent-color: #7d2ae8;
+}
+
+.form_container a {
+    color: #7d2ae8;
+    font-size: 13px;
+    white-space: nowrap;
+    /* margin-left: 9px; */
+}
+
+
+.form_container a:hover {
+    text-decoration: underline;
+}
+
+.checkbox label {
+    font-size: 13px;
+    color: #0b0217;
+    user-select: none;
+    cursor: pointer;
+}
+
+.form_container .button {
+    background-color: #7d2ae8;
+    margin-top: 30px;
+    padding: 10px 0;
+    border-radius: 10px;
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.login_signup {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+.form h2 {
+    text-align: center;
+}
+
+
+.signup_form {
+    display: none;
+}
+
+.form_container {
+    display: none;
+}
